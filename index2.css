@@ -1,0 +1,287 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 100%;
+    background-color:#87CEEB;
+  }
+  header{
+    display: flex;
+    background-color: black;
+    text-align: center;
+   
+
+  }
+  nav {
+    background-color: #181818;
+    overflow: hidden;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: whitesmoke;
+    padding: 15px 15px;
+  }
+  
+  .cont {
+    margin: 0px 50px;
+  }
+  
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  
+  a {
+    color: whitesmoke;
+  }
+  
+  .megogo {
+    font-size: 25px;
+  }
+  
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0px 25px;
+  }
+  
+  .menu a {
+    margin: 0px 15px;
+  }
+  
+  .btn {
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .btn li {
+    
+    margin: 0 25px;
+  }
+  
+  .border {
+    border: 0.5px solid whitesmoke;
+    padding: 10px 10px;
+    border-radius: 4px;
+  }
+  
+  
+  .slider-cont {
+    
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .wedgets {
+    
+    width: 100%;
+    background: rgb(200, 200, 200);
+  }
+  
+  .carts {
+    
+    width: 100%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .cart {
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .cart img {
+    padding: 0px 20px;
+  }
+  
+  .carts-news {
+   
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .cart-news img {
+   
+    width: 300px;
+  }
+  
+  .cart-news {
+    margin: 0 12px;
+  }
+  
+  .cart-news h1 {
+   
+    font-size: 20px;
+  }
+  
+  .seo {
+    margin-top: 40px;
+   
+  }
+  
+  .h1-text {
+    margin-bottom: 15px;
+  }
+ 
+body {
+  padding-top: 56px; 
+}
+
+.navbar {
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.navbar-toggler {
+  border: none;
+  cursor: pointer;
+}
+
+
+.navbar-collapse {
+  display: none;
+}
+
+
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+
+.navbar-nav .nav-item.active .nav-link {
+  color: #007bff;
+}
+
+
+.navbar-scrolled {
+  background-color: #343a40;
+}
+
+
+.container {
+  margin-top: 20px;
+}
+body {
+    height: 700px;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.rocket {
+    position: relative;
+    width: 40px;
+    height: 120px;
+    border-radius: 20px;
+    transform: rotate(-45deg);
+    animation: floatAnimation 5s linear infinite;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-50px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+}
+
+.history-button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.data-container {
+    margin-top: 20px;
+    display: none;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 300px; 
+    overflow-y: auto; 
+}
+
+#savedDataList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-item {
+    margin-bottom: 10px;
+}
+
+.data-item span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.collapse-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+

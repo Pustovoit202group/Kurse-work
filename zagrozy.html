@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index2.css">
+    <title>AirThreatsUA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./index2.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">AirThreatsUA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./infirmation.html">Інформація</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Мапа</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="avtorisation.html">Види загроз</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./zagrozy.html">Є Загроза</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-2">
+                <div class="rocket" style="left: 100px; top: 150px;">
+                    <img src="й.png" alt="Rocket Image" style="width: 2000px; height: 180px; transform: rotate(-260deg); ">
+                </div>
+            </div>
+
+            
+            <div class="col-md-2">
+                <div class="rocket" style="left: 200px; top: 250px;">
+                    <img src="й.png" alt="Rocket Image" style="width: 2000px; height: 180px; transform: rotate(-260deg);">
+                </div>
+            </div>
+
+           
+            <div class="col-md-2">
+                <div class="rocket" style="left: 300px; top: 100px;"><img src="й.png" alt="Rocket Image" style="width: 2000px; height: 180px; transform: rotate(-260deg);"></div>
+            </div>
+
+            
+            <div class="col-md-2">
+                <div class="rocket" style="left: 400px; top: 200px;"><img src="й.png" alt="Rocket Image" style="width: 2000px; height: 180px; transform: rotate(-260deg);"></div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="rocket" style="left: 500px; top: 300px;"><img src="й.png" alt="Rocket Image" style="width: 2000px; height: 180px; transform: rotate(-260deg);"></div>
+            </div>
+
+            
+            <div class="col-md-2">
+                <div class="rocket" style="left: 600px; top: 150px;"><img src="й.png" alt="Rocket Image" style="width: 2000px; height: 180px; transform: rotate(-260deg);"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form id="airObjectForm" onsubmit="return validateForm()">
+            <label for="location">Населений пункт:</label>
+            <input type="text" id="location" class="form-control" required>
+
+            <label for="direction">В яку сторону:</label>
+            <select id="direction" class="form-control" required>
+                <option value="north">Північ</option>
+                <option value="west">Захід</option>
+                <option value="east">Схід</option>
+                <option value="south">Південь</option>
+            </select>
+
+            <label for="whatIsFlying">Що летить:</label>
+            <input type="text" id="whatIsFlying" class="form-control" required>
+
+            <button type="submit" class="btn btn-success">Відправити</button>
+        </form>
+        <button class="history-button" onclick="toggleHistory()">Історія</button>
+        <div class="data-container">
+            <h3>Збережена історія</h3>
+            <ul id="savedDataList"></ul>
+            <button class="collapse-button" onclick="toggleHistory()">Згорнути</button>
+        </div>
+    </div>
+</body>
+</html>

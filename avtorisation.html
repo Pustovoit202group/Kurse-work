@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>AirThreatsUA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.threat-link').click(function () {
+                var threatType = $(this).data('threat-type');
+                var threatInfo = getThreatInfo(threatType);
+                showThreatInfo(threatInfo);
+            });
+
+            function getThreatInfo(threatType) {
+                switch (threatType) {
+                    case "Повітряна тривога":
+                        return "Зазвичай це видається високочастотний та сильний сигнал, який легко розпізнається та відрізняється від звичайних звуків оточення. Це робиться для того, щоб максимально ефективно привернути увагу та швидко сповістити людей про необхідність прийняття заходів для власної безпеки. Вірогідність обстрілу ракетами, літаками, гвинтокрилами";
+                    case "Загроза артобстрілу":
+                        return "Сирена під час артилерійського обстрілу: поєднання високочастотного тону та низькочастотного сигналу, яке слугує для того, щоб вразити увагу людей та повідомити їх про те, що вони повинні прийняти заходи для власної безпеки, наприклад, шукати укриття. Загрози: Обстріл інфраструктури, людей. Має велику уражаючу силу";
+                    case "Загроза вуличних боїв":
+                        return "Чутні постійні постріли постріли, вибухи, роботу важкої техніки.Загрози: Обстріл інфраструктури, людей. Може становити як дуже малу загрозу так і дуже велику загрозу";
+                    case "Хімічна загроза":
+                        return "Сигнал хімічної небезпеки – звук церковних дзвонів і переривчасті гудки підприємств – це сигнал Увага всім. Дуже небеспечне явище, яке може знищити багато людських жертв";
+                    case "Радіаційна загроза":
+                        return "Сигнал радіаційної небезпеки – дзвін в набат. В край небезпечний вид повітряних загроз. Потрібно ховатися швидко, хлибоко та надовго. Знищує все живе що існує!!!";
+                }
+            }
+
+            function showThreatInfo(info) {
+                alert(info);
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">AirThreatsUA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="./infirmation.html">Інформація</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Мапа</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./avtorisation.html">Види загроз</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./zagrozy.html">Є Загроза</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="display-4">AirThreatsUA</h1>
+        <p class="lead">Повітряні воєнні загрози включають в себе різноманітні аспекти, пов'язані з можливістю ведення бойових дій в повітряному просторі. Ці загрози можуть бути спрямовані на військові та цивільні об'єкти, і вони мають великий вплив на стратегічні та тактичні плани оборони.</p>
+        <h2 class="mt-4">Види повітряних загроз:</h2>
+        <ul class="list-group mb-4">
+            <li class="list-group-item">
+                <a href="#" class="nav-link threat-link" data-threat-type="Повітряна тривога">
+                    <img src="air-raid.webp" alt="Air Alarm Icon" width="15" height="15" class="img-fluid"> Повітряна тривога
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="#" class="nav-link threat-link" data-threat-type="Загроза артобстрілу">
+                    <img src="artillery-shelling.webp" alt="Artillery Threat Icon" width="15" height="15" class="img-fluid"> Загроза артобстрілу
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="#" class="nav-link threat-link" data-threat-type="Загроза вуличних боїв">
+                    <img src="urban-fights.webp" alt="Street Battle Threat Icon" width="15" height="15" class="img-fluid"> Загроза вуличних боїв
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="#" class="nav-link threat-link" data-threat-type="Хімічна загроза">
+                    <img src="chemical.webp" alt="Chemical Threat Icon" width="15" height="15" class="img-fluid"> Хімічна загроза
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="#" class="nav-link threat-link" data-threat-type="Радіаційна загроза">
+                    <img src="nuclear.webp" alt="Radiation Threat Icon" width="15" height="15" class="img-fluid"> Радіаційна загроза
+                </a>
+            </li>
+        </ul>
+        <h2 class="mb-4">AirThreatsUA прагне забезпечити актуальну та достовірну інформацію про повітряні загрози, допомагаючи громадянам України приймати обдумані рішення та залишатися в безпеці в разі виникнення подібних ситуацій.</h2>
+    </div>
+</body>
+<footer class="mt-5">
+    <div class="container">
+        <nav class="text-center">
+            <h4>Власність ЗСУ, не для продажу!</h4>
+            <h4><a href="https://ab3.army/">Співпарця</a></h4>
+        </nav>
+    </div>
+</footer>
+</html>
+
